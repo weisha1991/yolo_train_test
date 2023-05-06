@@ -15,6 +15,18 @@ yum install -y libnccl-2.12.10-1+cuda11.6
 cudann
 yum install -y libcudnn8-8.4.0.27-1.cuda11.6
 
+devel
+
+ yum install -y   cuda-command-line-tools-11-6-11.6.1-1 
+ yum install -y   cuda-libraries-devel-11-6-11.6.1-1 
+ yum install -y   cuda-minimal-build-11-6-11.6.1-1 
+ yum install -y   cuda-cudart-devel-11-6-11.6.55-1 
+ yum install -y  cuda-nvprof-11-6-11.6.112-1 
+ yum install -y   cuda-nvml-devel-11-6-11.6.55-1 
+ yum install -y   libcublas-devel-11-6-11.8.1.74-1 
+ yum install -y   libnpp-devel-11-6-11.6.2.112-1 
+ yum install -y   libnccl-devel-2.12.10-1+cuda11.6 
+
 
 
 
