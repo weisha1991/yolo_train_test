@@ -1,16 +1,21 @@
 NVIDIA_GPGKEY_SUM=d0664fbbdb8c32356d45de36c5984617217b2d0bef41b93ccecd326ba3b80c87 && \
     curl -fsSL https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/D42D0685.pub | sed '/^Version/d' > /etc/pki/rpm-gpg/RPM-GPG-KEY-NVIDIA && \
     echo "$NVIDIA_GPGKEY_SUM  /etc/pki/rpm-gpg/RPM-GPG-KEY-NVIDIA" | sha256sum -c --strict -
-
+bases
 yum install -y cuda-compat-11-6
 yum install -y cuda-cudart-11-6-11.6.55-1
+
+runtime
 yum install -y cuda-libraries-11-6-11.6.1-
 yum install -y cuda-nvtx-11-6-11.6.112-1 
 yum install -y libnpp-11-6-11.6.2.112-1
 yum install -y libcublas-11-6-11.8.1.74-1 
 yum install -y libnccl-2.12.10-1+cuda11.6 
 
+cudann
 yum install -y libcudnn8-8.4.0.27-1.cuda11.6
+
+
 
 
 yum remove -y cuda-compat-11-6
