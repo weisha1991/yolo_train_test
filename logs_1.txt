@@ -1,0 +1,555 @@
+
+[root@b6f119915485 yum.repos.d]# yum install -y cuda-compat-11-6
+Loaded plugins: fastestmirror, ovl
+Loading mirror speeds from cached hostfile
+ * base: centos-distro.cavecreek.net
+ * extras: mirror.phx1.us.spryservers.net
+ * updates: mirror.sfo12.us.leaseweb.net
+Resolving Dependencies
+--> Running transaction check
+---> Package cuda-compat-11-6.x86_64 1:510.108.03-1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=================================================================================================================================================
+ Package                                 Arch                          Version                                 Repository                   Size
+=================================================================================================================================================
+Installing:
+ cuda-compat-11-6                        x86_64                        1:510.108.03-1                          cuda                         16 M
+
+Transaction Summary
+=================================================================================================================================================
+Install  1 Package
+
+Total download size: 16 M
+Installed size: 59 M
+Downloading packages:
+cuda-compat-11-6-510.108.03-1.x86_64.rpm                                                                                  |  16 MB  00:00:07
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:cuda-compat-11-6-510.108.03-1.x86_64                                                                                        1/1
+  Verifying  : 1:cuda-compat-11-6-510.108.03-1.x86_64                                                                                        1/1
+
+Installed:
+  cuda-compat-11-6.x86_64 1:510.108.03-1
+
+Complete!
+[root@b6f119915485 yum.repos.d]# yum install -y cuda-cudart-11-6-11.6.55-1
+Loaded plugins: fastestmirror, ovl
+Loading mirror speeds from cached hostfile
+ * base: centos-distro.cavecreek.net
+ * extras: mirror.phx1.us.spryservers.net
+ * updates: mirror.sfo12.us.leaseweb.net
+Resolving Dependencies
+--> Running transaction check
+---> Package cuda-cudart-11-6.x86_64 0:11.6.55-1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=================================================================================================================================================
+ Package                                  Arch                           Version                              Repository                    Size
+=================================================================================================================================================
+Installing:
+ cuda-cudart-11-6                         x86_64                         11.6.55-1                            cuda                         215 k
+
+Transaction Summary
+=================================================================================================================================================
+Install  1 Package
+
+Total download size: 215 k
+Installed size: 742 k
+Downloading packages:
+cuda-cudart-11-6-11.6.55-1.x86_64.rpm                                                                                     | 215 kB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : cuda-cudart-11-6-11.6.55-1.x86_64                                                                                             1/1
+  Verifying  : cuda-cudart-11-6-11.6.55-1.x86_64                                                                                             1/1
+
+Installed:
+  cuda-cudart-11-6.x86_64 0:11.6.55-1
+
+Complete!
+[root@b6f119915485 yum.repos.d]# yum install -y cuda-cudart-11-6-11.6.55-1^C
+[root@b6f119915485 yum.repos.d]# yum replist
+Loaded plugins: fastestmirror, ovl
+No such command: replist. Please use /usr/bin/yum --help
+[root@b6f119915485 yum.repos.d]# yum deplist  cuda-cudart-11-6-11.6.55-1
+Loaded plugins: fastestmirror, ovl
+Loading mirror speeds from cached hostfile
+ * base: centos-distro.cavecreek.net
+ * extras: mirror.phx1.us.spryservers.net
+ * updates: mirror.sfo12.us.leaseweb.net
+package: cuda-cudart-11-6.x86_64 11.6.55-1
+  dependency: /sbin/ldconfig
+   provider: glibc.x86_64 2.17-326.el7_9
+   provider: glibc.i686 2.17-326.el7_9
+  dependency: cuda-toolkit-11-6-config-common
+   provider: cuda-toolkit-11-6-config-common.noarch 11.6.55-1
+  dependency: cuda-toolkit-11-config-common
+   provider: cuda-toolkit-11-config-common.noarch 11.8.89-1
+  dependency: cuda-toolkit-config-common
+   provider: cuda-toolkit-config-common.noarch 12.1.105-1
+[root@b6f119915485 yum.repos.d]# yum install -y cuda-libraries-11-6-11.6.1-1
+Loaded plugins: fastestmirror, ovl
+Loading mirror speeds from cached hostfile
+ * base: centos-distro.cavecreek.net
+ * extras: mirror.phx1.us.spryservers.net
+ * updates: mirror.sfo12.us.leaseweb.net
+Resolving Dependencies
+--> Running transaction check
+---> Package cuda-libraries-11-6.x86_64 0:11.6.1-1 will be installed
+--> Processing Dependency: cuda-nvrtc-11-6 >= 11.6.112 for package: cuda-libraries-11-6-11.6.1-1.x86_64
+--> Processing Dependency: libcublas-11-6 >= 11.8.1.74 for package: cuda-libraries-11-6-11.6.1-1.x86_64
+--> Processing Dependency: libcufft-11-6 >= 10.7.1.112 for package: cuda-libraries-11-6-11.6.1-1.x86_64
+--> Processing Dependency: libcufile-11-6 >= 1.2.1.4 for package: cuda-libraries-11-6-11.6.1-1.x86_64
+--> Processing Dependency: libcurand-11-6 >= 10.2.9.55 for package: cuda-libraries-11-6-11.6.1-1.x86_64
+--> Processing Dependency: libcusolver-11-6 >= 11.3.3.112 for package: cuda-libraries-11-6-11.6.1-1.x86_64
+--> Processing Dependency: libcusparse-11-6 >= 11.7.2.112 for package: cuda-libraries-11-6-11.6.1-1.x86_64
+--> Processing Dependency: libnpp-11-6 >= 11.6.2.112 for package: cuda-libraries-11-6-11.6.1-1.x86_64
+--> Processing Dependency: libnvjpeg-11-6 >= 11.6.1.112 for package: cuda-libraries-11-6-11.6.1-1.x86_64
+--> Running transaction check
+---> Package cuda-nvrtc-11-6.x86_64 0:11.6.124-1 will be installed
+---> Package libcublas-11-6.x86_64 0:11.9.2.110-1 will be installed
+---> Package libcufft-11-6.x86_64 0:10.7.2.124-1 will be installed
+---> Package libcufile-11-6.x86_64 0:1.2.1.4-1 will be installed
+---> Package libcurand-11-6.x86_64 0:10.2.9.124-1 will be installed
+---> Package libcusolver-11-6.x86_64 0:11.3.4.124-1 will be installed
+---> Package libcusparse-11-6.x86_64 0:11.7.2.124-1 will be installed
+---> Package libnpp-11-6.x86_64 0:11.6.3.124-1 will be installed
+---> Package libnvjpeg-11-6.x86_64 0:11.6.2.124-1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=================================================================================================================================================
+ Package                                    Arch                          Version                              Repository                   Size
+=================================================================================================================================================
+Installing:
+ cuda-libraries-11-6                        x86_64                        11.6.1-1                             cuda                        3.0 k
+Installing for dependencies:
+ cuda-nvrtc-11-6                            x86_64                        11.6.124-1                           cuda                         20 M
+ libcublas-11-6                             x86_64                        11.9.2.110-1                         cuda                        319 M
+ libcufft-11-6                              x86_64                        10.7.2.124-1                         cuda                         98 M
+ libcufile-11-6                             x86_64                        1.2.1.4-1                            cuda                        627 k
+ libcurand-11-6                             x86_64                        10.2.9.124-1                         cuda                         51 M
+ libcusolver-11-6                           x86_64                        11.3.4.124-1                         cuda                        110 M
+ libcusparse-11-6                           x86_64                        11.7.2.124-1                         cuda                        174 M
+ libnpp-11-6                                x86_64                        11.6.3.124-1                         cuda                        125 M
+ libnvjpeg-11-6                             x86_64                        11.6.2.124-1                         cuda                        2.6 M
+
+Transaction Summary
+=================================================================================================================================================
+Install  1 Package (+9 Dependent packages)
+
+Total size: 900 M
+Total download size: 782 M
+Installed size: 1.6 G
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+(1/6): libcublas-11-6-11.9.2.110-1.x86_64.rpm              8% [====                                            ] 2.3 MB/s |  67 MB  00:05:16 ETA
+(2/6): libcurand-11-6-10.2.9.124-1.x86_64.rpm              8% [====                                            ] 2.2 MB/s |  69 MB  00:05:19 ETA
+(2/6): libcurand-11-6-10.2.9.124-1.x86_64.rpm              8% [====                                            ] 2.3 MB/s |  70 MB  00:05:13 ETA
+
+(2/6): libcurand-11-6-10.2.9.124-1.x86_64.rpm              9% [====                                            ] 2.3 MB/s |  70 MB  00:05:12 ETA
+(1/6): libcurand-11-6-10.2.9.124-1.x86_64.rpm                                                                             |  51 MB  00:00:24
+(2/6): libcusolver-11-6-11.3.4.124-1.x86_64.rpm                                                                           | 110 MB  00:01:37
+(3/6): libcusparse-11-6-11.7.2.124-1.x86_64.rpm                                                                           | 174 MB  00:02:34
+(4/6): libcublas-11-6-11.9.2.110-1.x86_64.rpm                                                                             | 319 MB  00:04:41
+(5/6): libnvjpeg-11-6-11.6.2.124-1.x86_64.rpm                                                                             | 2.6 MB  00:00:02
+(6/6): libnpp-11-6-11.6.3.124-1.x86_64.rpm                                                                                | 125 MB  00:00:57
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                            2.3 MB/s | 782 MB  00:05:33
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : libnpp-11-6-11.6.3.124-1.x86_64                                                                                              1/10
+  Installing : libcusolver-11-6-11.3.4.124-1.x86_64                                                                                         2/10
+  Installing : libcurand-11-6-10.2.9.124-1.x86_64                                                                                           3/10
+  Installing : libcufile-11-6-1.2.1.4-1.x86_64                                                                                              4/10
+  Installing : libcufft-11-6-10.7.2.124-1.x86_64                                                                                            5/10
+  Installing : libnvjpeg-11-6-11.6.2.124-1.x86_64                                                                                           6/10
+  Installing : libcublas-11-6-11.9.2.110-1.x86_64                                                                                           7/10
+  Installing : cuda-nvrtc-11-6-11.6.124-1.x86_64                                                                                            8/10
+  Installing : libcusparse-11-6-11.7.2.124-1.x86_64                                                                                         9/10
+  Installing : cuda-libraries-11-6-11.6.1-1.x86_64                                                                                         10/10
+  Verifying  : libcusparse-11-6-11.7.2.124-1.x86_64                                                                                         1/10
+  Verifying  : cuda-libraries-11-6-11.6.1-1.x86_64                                                                                          2/10
+  Verifying  : cuda-nvrtc-11-6-11.6.124-1.x86_64                                                                                            3/10
+  Verifying  : libcublas-11-6-11.9.2.110-1.x86_64                                                                                           4/10
+  Verifying  : libnvjpeg-11-6-11.6.2.124-1.x86_64                                                                                           5/10
+  Verifying  : libcufft-11-6-10.7.2.124-1.x86_64                                                                                            6/10
+  Verifying  : libcufile-11-6-1.2.1.4-1.x86_64                                                                                              7/10
+  Verifying  : libcurand-11-6-10.2.9.124-1.x86_64                                                                                           8/10
+  Verifying  : libcusolver-11-6-11.3.4.124-1.x86_64                                                                                         9/10
+  Verifying  : libnpp-11-6-11.6.3.124-1.x86_64                                                                                             10/10
+
+Installed:
+  cuda-libraries-11-6.x86_64 0:11.6.1-1
+
+Dependency Installed:
+  cuda-nvrtc-11-6.x86_64 0:11.6.124-1             libcublas-11-6.x86_64 0:11.9.2.110-1          libcufft-11-6.x86_64 0:10.7.2.124-1
+  libcufile-11-6.x86_64 0:1.2.1.4-1               libcurand-11-6.x86_64 0:10.2.9.124-1          libcusolver-11-6.x86_64 0:11.3.4.124-1
+  libcusparse-11-6.x86_64 0:11.7.2.124-1          libnpp-11-6.x86_64 0:11.6.3.124-1             libnvjpeg-11-6.x86_64 0:11.6.2.124-1
+
+Complete!
+[root@b6f119915485 yum.repos.d]#
+[root@b6f119915485 yum.repos.d]#
+[root@b6f119915485 yum.repos.d]#
+[root@b6f119915485 yum.repos.d]#
+[root@b6f119915485 yum.repos.d]#
+[root@b6f119915485 yum.repos.d]#
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Session stopped
+    - Press <return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file
+
+Network error: Software caused connection abort
+login as: root
+     ┌────────────────────────────────────────────────────────────────────┐
+     │                        • MobaXterm 10.4 •                          │
+     │            (SSH client, X-server and networking tools)             │
+     │                                                                    │
+     │ ➤ SSH session to root@23.247.128.38                                │
+     │   • SSH compression : ✔                                            │
+     │   • SSH-browser     : ✔                                            │
+     │   • X11-forwarding  : ✘  (disabled or not supported by server)     │
+     │   • DISPLAY         : 192.168.0.106:0.0                            │
+     │                                                                    │
+     │ ➤ For more info, ctrl+click on help or visit our website           │
+     └────────────────────────────────────────────────────────────────────┘
+
+Last failed login: Sat May  6 23:44:51 CST 2023 from 170.64.169.50 on ssh:notty
+There were 107 failed login attempts since the last successful login.
+Last login: Sat May  6 22:35:34 2023 from 120.229.91.167
+
+Welcome to Yisu Cloud Computing Service!
+Please visit www.yisu.com or call 400-100-2938 for 7*24 technical support.
+[root@yisu-644be695150bf ~]# yum install -y cuda-nvtx-11-6-11.6.112-1
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.hostduplex.com
+ * epel: irltoolkit.mm.fcix.net
+ * extras: mirror.arizona.edu
+ * updates: abqix.mm.fcix.net
+Resolving Dependencies
+--> Running transaction check
+---> Package cuda-nvtx-11-6.x86_64 0:11.6.112-1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=================================================================================================================================================
+ Package                                 Arch                            Version                             Repository                     Size
+=================================================================================================================================================
+Installing:
+ cuda-nvtx-11-6                          x86_64                          11.6.112-1                          cuda                           83 k
+
+Transaction Summary
+=================================================================================================================================================
+Install  1 Package
+
+Total download size: 83 k
+Installed size: 405 k
+Downloading packages:
+warning: /var/cache/yum/x86_64/7/cuda/packages/cuda-nvtx-11-6-11.6.112-1.x86_64.rpm: Header V4 RSA/SHA512 Signature, key ID d42d0685: NOKEY- ETA
+Public key for cuda-nvtx-11-6-11.6.112-1.x86_64.rpm is not installed
+cuda-nvtx-11-6-11.6.112-1.x86_64.rpm                                                                                      |  83 kB  00:00:00
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-NVIDIA
+
+
+GPG key retrieval failed: [Errno 14] curl#37 - "Couldn't open file /etc/pki/rpm-gpg/RPM-GPG-KEY-NVIDIA"
+[root@yisu-644be695150bf ~]# cat /etc/pki/rpm-gpg/RPM-GPG-KEY-NVIDIA
+cat: /etc/pki/rpm-gpg/RPM-GPG-KEY-NVIDIA: No such file or directory
+[root@yisu-644be695150bf ~]# NVIDIA_GPGKEY_SUM=d0664fbbdb8c32356d45de36c5984617217b2d0bef41b93ccecd326ba3b80c87 && \
+>     curl -fsSL https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/D42D0685.pub | sed '/^Version/d' > /etc/pki/rpm-gpg/RPM-GPG-KEY-NVIDIA && \
+>     echo "$NVIDIA_GPGKEY_SUM  /etc/pki/rpm-gpg/RPM-GPG-KEY-NVIDIA" | sha256sum -c --strict -
+/etc/pki/rpm-gpg/RPM-GPG-KEY-NVIDIA: OK
+[root@yisu-644be695150bf ~]# cat /etc/pki/rpm-gpg/RPM-GPG-KEY-NVIDIA                                                                             -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQINBGJYmlEBEACWTlLInNFRO4j0kcXNwaqsFs48ov6rIBXHAip/mRQa4bQQOpLh
+Fjx02ubhV/2zoyz6a0uRPYRd7bxLLNUABSFfT/hp14m+jbY0rzO/Y8S42oXUFlbR
+2rItp6pQsX5KivAs2FNpXVbEHeojx6XJFDhZkjfOEyoGiMmMgmFZTfiCOU6nGInW
+a4JvzPN6hj6GmQMHI2jYim5by2kXYeUg9LlrteV31RzvpyB3chkqeCGgL+bzaRXn
+wNZhMZJOAGI+I+wX0kHLFI+T4TU61VxL6RkDrGFJZBXp0Enzq0IcxPA0KoZk4UK5
+WG6oth4/eEEcyxFnzIWm1wAJhSOyo1Xxm3475UcP2wEDkW3S0IZt14ZTT1YluUY6
+dwiUD8SCInYAfU9CYzHjkBsswiGy47mJTaVnWfjFF+Nk6RJXAN/bcnu6VsZPqM54
+mrhWLl34kCorzWKqY1tGIFwo/9wVJ6JXPDs27zq2mX5OpPqcnD/7xdRhar4A/rJ9
+dgcwzdhH0ChoFf92Ij+x48tght+NTSHNGysZbdNIFBS1VFg68vgR4vSOSIkiPOU5
+gTd2gmVrusrFOPBx+4dq6sxUALb67Z1cS1areq/gCYm5T0eGlX8+KvkLv+temLUj
+rscJW0iNibYQJdigPNx66LshdgodTTG+CInc4c4h9USMJZSYwiwhiGqmewARAQAB
+tCBjdWRhdG9vbHMgPGN1ZGF0b29sc0BudmlkaWEuY29tPokCOQQTAQIAIwUCYlia
+UQIbAwcLCQgHAwIBBhUIAgkKCwQWAgMBAh4BAheAAAoJEJzQpJPULQaFN3AP/RZF
+HuO8P1YZhNGl0EpyJkBXlufextNfz2KnjoJNj0+1E8pfR+P1SjROjE6doywVY8DF
+XzB1tnp0HVhIxEo/iLMe8AiJDyz/2uHsp+mzc2ZzONxcvB09BTOkCPO7tfbVgsMb
+ZFVNIWqiCYEfHjivwymV77Sh9nJYvWfPEPp84V/YVB9lTrBrOUh7G8rjitG3nTbI
+ZG6+pkWi3Q9z5GjgtpbnV8AdRNBBPaSTnnZ3gk5cgkJk3CHVf6/6BXvLLicM8k5v
+qQhq2MtPExIIAfr8hmg1PLWGLEfAA+3INGTSWXu0HbJNW8bRiVi62wAQFkq5gZLo
+wTx6bgQc05dTX+aqBS071KTrICffjlRfrH05JL8HgwWeYC0jG3cGE1cVWSPspCmp
+ecnH0CZGrpyCBDUIYho6BXW3IJetSH1WZ8rslYhgIXCPeGpbOQy6//GJzspePZ8M
+9gZk9efWfMscwkeGHz10KIdeCacppSeYtOO8CJIBeh79hdW54UO5uadQt/xd+dy6
+CSoK7IXjZcVRXbYN11NS4y8B+Q1KHImJj69bQczI4xqibkDJFylUq4NGEYNkH3pL
+wuWNVDbw3KpaErRE06bnZHi46u3upICFMpcrSONTX2JYHWnwf8hWKTi/AeMt5TqU
+2yZ9xVhsreSa6Wy1VES1sj+6B/ewQTCzRxXqTk3K
+=fyUA
+-----END PGP PUBLIC KEY BLOCK-----
+[root@yisu-644be695150bf ~]# yum install -y cuda-nvtx-11-6-11.6.112-1                                                                            Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.hostduplex.com
+ * epel: irltoolkit.mm.fcix.net
+ * extras: mirror.arizona.edu
+ * updates: abqix.mm.fcix.net
+Resolving Dependencies
+--> Running transaction check
+---> Package cuda-nvtx-11-6.x86_64 0:11.6.112-1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=================================================================================================================================================
+ Package                                 Arch                            Version                             Repository                     Size
+=================================================================================================================================================
+Installing:
+ cuda-nvtx-11-6                          x86_64                          11.6.112-1                          cuda                           83 k
+
+Transaction Summary
+=================================================================================================================================================
+Install  1 Package
+
+Total size: 83 k
+Installed size: 405 k
+Downloading packages:
+warning: /var/cache/yum/x86_64/7/cuda/packages/cuda-nvtx-11-6-11.6.112-1.x86_64.rpm: Header V4 RSA/SHA512 Signature, key ID d42d0685: NOKEY
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-NVIDIA
+Importing GPG key 0xD42D0685:
+ Userid     : "cudatools <cudatools@nvidia.com>"
+ Fingerprint: 610c 7b14 e068 a878 070d a4e9 9cd0 a493 d42d 0685
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-NVIDIA
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : cuda-nvtx-11-6-11.6.112-1.x86_64                                                                                              1/1
+  Verifying  : cuda-nvtx-11-6-11.6.112-1.x86_64                                                                                              1/1
+
+Installed:
+  cuda-nvtx-11-6.x86_64 0:11.6.112-1
+
+Complete!
+[root@yisu-644be695150bf ~]# yum install -y libnpp-11-6-11.6.2.112-1
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.hostduplex.com
+ * epel: d2lzkl7pfhq30w.cloudfront.net
+ * extras: mirror.arizona.edu
+ * updates: abqix.mm.fcix.net
+Resolving Dependencies
+--> Running transaction check
+---> Package libnpp-11-6.x86_64 0:11.6.2.112-1 will be installed
+--> Processing Dependency: cuda-toolkit-config-common for package: libnpp-11-6-11.6.2.112-1.x86_64
+--> Processing Dependency: cuda-toolkit-11-config-common for package: libnpp-11-6-11.6.2.112-1.x86_64
+--> Processing Dependency: cuda-toolkit-11-6-config-common for package: libnpp-11-6-11.6.2.112-1.x86_64
+--> Running transaction check
+---> Package cuda-toolkit-11-6-config-common.noarch 0:11.6.55-1 will be installed
+---> Package cuda-toolkit-11-config-common.noarch 0:11.8.89-1 will be installed
+---> Package cuda-toolkit-config-common.noarch 0:12.1.105-1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=================================================================================================================================================
+ Package                                             Arch                       Version                           Repository                Size
+=================================================================================================================================================
+Installing:
+ libnpp-11-6                                         x86_64                     11.6.2.112-1                      cuda                     125 M
+Installing for dependencies:
+ cuda-toolkit-11-6-config-common                     noarch                     11.6.55-1                         cuda                     3.1 k
+ cuda-toolkit-11-config-common                       noarch                     11.8.89-1                         cuda                     7.9 k
+ cuda-toolkit-config-common                          noarch                     12.1.105-1                        cuda                     7.9 k
+
+Transaction Summary
+=================================================================================================================================================
+Install  1 Package (+3 Dependent packages)
+
+Total download size: 125 M
+Installed size: 195 M
+Downloading packages:
+(1/4): cuda-toolkit-11-6-config-common-11.6.55-1.noarch.rpm                                                               | 3.1 kB  00:00:00
+(2/4): cuda-toolkit-11-config-common-11.8.89-1.noarch.rpm                                                                 | 7.9 kB  00:00:00
+(3/4): cuda-toolkit-config-common-12.1.105-1.noarch.rpm                                                                   | 7.9 kB  00:00:00
+(4/4): libnpp-11-6-11.6.2.112-1.x86_64.rpm                                                                                | 125 MB  00:00:54
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                            2.3 MB/s | 125 MB  00:00:55
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : cuda-toolkit-11-config-common-11.8.89-1.noarch                                                                                1/4
+  Installing : cuda-toolkit-config-common-12.1.105-1.noarch                                                                                  2/4
+  Installing : cuda-toolkit-11-6-config-common-11.6.55-1.noarch                                                                              3/4
+  Installing : libnpp-11-6-11.6.2.112-1.x86_64                                                                                               4/4
+  Verifying  : cuda-toolkit-11-6-config-common-11.6.55-1.noarch                                                                              1/4
+  Verifying  : cuda-toolkit-config-common-12.1.105-1.noarch                                                                                  2/4
+  Verifying  : libnpp-11-6-11.6.2.112-1.x86_64                                                                                               3/4
+  Verifying  : cuda-toolkit-11-config-common-11.8.89-1.noarch                                                                                4/4
+
+Installed:
+  libnpp-11-6.x86_64 0:11.6.2.112-1
+
+Dependency Installed:
+  cuda-toolkit-11-6-config-common.noarch 0:11.6.55-1                       cuda-toolkit-11-config-common.noarch 0:11.8.89-1
+  cuda-toolkit-config-common.noarch 0:12.1.105-1
+
+Complete!
+[root@yisu-644be695150bf ~]# yum install -y libcublas-11-6-11.8.1.74-1
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.hostduplex.com
+ * epel: irltoolkit.mm.fcix.net
+ * extras: mirror.arizona.edu
+ * updates: abqix.mm.fcix.net
+Resolving Dependencies
+--> Running transaction check
+---> Package libcublas-11-6.x86_64 0:11.8.1.74-1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=================================================================================================================================================
+ Package                                Arch                           Version                                Repository                    Size
+=================================================================================================================================================
+Installing:
+ libcublas-11-6                         x86_64                         11.8.1.74-1                            cuda                         314 M
+
+Transaction Summary
+=================================================================================================================================================
+Install  1 Package
+
+Total download size: 314 M
+Installed size: 476 M
+Downloading packages:
+libcublas-11-6-11.8.1.74-1.x86_64.rpm                                                                                     | 314 MB  00:02:20
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : libcublas-11-6-11.8.1.74-1.x86_64                                                                                             1/1
+  Verifying  : libcublas-11-6-11.8.1.74-1.x86_64                                                                                             1/1
+
+Installed:
+  libcublas-11-6.x86_64 0:11.8.1.74-1
+
+Complete!
+[root@yisu-644be695150bf ~]# yum install -y libnccl-2.12.10-1
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.hostduplex.com
+ * epel: irltoolkit.mm.fcix.net
+ * extras: mirror.arizona.edu
+ * updates: abqix.mm.fcix.net
+No package libnccl-2.12.10-1 available.
+Error: Nothing to do
+[root@yisu-644be695150bf ~]# yum install -y libnccl-2.12.10-1+cuda11.6
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.hostduplex.com
+ * epel: d2lzkl7pfhq30w.cloudfront.net
+ * extras: mirror.arizona.edu
+ * updates: abqix.mm.fcix.net
+Resolving Dependencies
+--> Running transaction check
+---> Package libnccl.x86_64 0:2.12.10-1+cuda11.6 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=================================================================================================================================================
+ Package                         Arch                           Version                                       Repository                    Size
+=================================================================================================================================================
+Installing:
+ libnccl                         x86_64                         2.12.10-1+cuda11.6                            cuda                          86 M
+
+Transaction Summary
+=================================================================================================================================================
+Install  1 Package
+
+Total download size: 86 M
+Installed size: 208 M
+Downloading packages:
+libnccl-2.12.10-1+cuda11.6.x86_64.rpm                                                                                     |  86 MB  00:00:38
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : libnccl-2.12.10-1+cuda11.6.x86_64                                                                                             1/1
+  Verifying  : libnccl-2.12.10-1+cuda11.6.x86_64                                                                                             1/1
+
+Installed:
+  libnccl.x86_64 0:2.12.10-1+cuda11.6
+
+Complete!
+[root@yisu-644be695150bf ~]#
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Session stopped
+    - Press <return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file
+
+Network error: Software caused connection abort
+login as: root
+     ┌────────────────────────────────────────────────────────────────────┐
+     │                        • MobaXterm 10.4 •                          │
+     │            (SSH client, X-server and networking tools)             │
+     │                                                                    │
+     │ ➤ SSH session to root@23.247.128.38                                │
+     │   • SSH compression : ✔                                            │
+     │   • SSH-browser     : ✔                                            │
+     │   • X11-forwarding  : ✘  (disabled or not supported by server)     │
+     │   • DISPLAY         : 192.168.0.106:0.0                            │
+     │                                                                    │
+     │ ➤ For more info, ctrl+click on help or visit our website           │
+     └────────────────────────────────────────────────────────────────────┘
+
+Last failed login: Sun May  7 00:02:55 CST 2023 from 170.64.169.50 on ssh:notty
+There were 7 failed login attempts since the last successful login.
+Last login: Sat May  6 23:45:45 2023 from 120.229.91.167
+
+Welcome to Yisu Cloud Computing Service!
+Please visit www.yisu.com or call 400-100-2938 for 7*24 technical support.
+[root@yisu-644be695150bf ~]# yum install -y libcudnn8-8.4.0.27-1.cuda11.6
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.hostduplex.com
+ * epel: irltoolkit.mm.fcix.net
+ * extras: mirror.arizona.edu
+ * updates: abqix.mm.fcix.net
+Resolving Dependencies
+--> Running transaction check
+---> Package libcudnn8.x86_64 0:8.4.0.27-1.cuda11.6 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=================================================================================================================================================
+ Package                           Arch                           Version                                     Repository                    Size
+=================================================================================================================================================
+Installing:
+ libcudnn8                         x86_64                         8.4.0.27-1.cuda11.6                         cuda                         685 M
+
+Transaction Summary
+=================================================================================================================================================
+Install  1 Package
+
+Total download size: 685 M
+Installed size: 1.2 G
+Downloading packages:
+libcudnn8-8.4.0.27-1.cuda11.6.x86_64.rpm                   1% [-                                               ] 1.6 MB/s |  11 MB  00:07:03 ETA
